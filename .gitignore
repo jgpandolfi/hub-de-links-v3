@@ -1,0 +1,123 @@
+# =============================================================================
+# .gitignore - Hub de Links V3
+# Arquivos e pastas a serem ignorados pelo Git
+# =============================================================================
+
+# ----------------- ARQUIVOS SENSÍVEIS -----------------
+# Credenciais do banco de dados
+backend/api/configuracao-banco.php
+
+# Variáveis de ambiente
+.env
+.env.local
+.env.production
+
+# Arquivos de configuração com credenciais
+config.php
+config.local.php
+
+# ----------------- LOGS E CACHE -----------------
+# Logs do servidor
+*.log
+error_log
+debug.log
+
+# Cache do PHP
+*.cache
+
+# ----------------- DIRETÓRIOS DO SISTEMA -----------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# ----------------- IDEs E EDITORES -----------------
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# JetBrains (PHPStorm, WebStorm, etc)
+.idea/
+*.iml
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Atom
+.atom/
+
+# ----------------- DEPENDÊNCIAS E BUILD -----------------
+# Node modules (caso use futuramente)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Composer (caso use futuramente)
+vendor/
+composer.lock
+
+# ----------------- BACKUPS E TEMPORÁRIOS -----------------
+# Arquivos de backup
+*.bak
+*.backup
+*.old
+*.orig
+*.save
+*.swp
+*.tmp
+*~
+
+# Arquivos temporários
+temp/
+tmp/
+*.temp
+
+# ----------------- UPLOADS E MÍDIA -----------------
+# Diretório de uploads (se houver)
+uploads/*
+!uploads/.gitkeep
+
+# Imagens grandes temporárias
+*.psd
+*.ai
+
+# ----------------- DOCUMENTAÇÃO INTERNA -----------------
+# Notas privadas
+NOTAS-PRIVADAS.md
+TODO-PRIVATE.md
+
+# ----------------- ARQUIVOS DE TESTE -----------------
+# Arquivos de teste
+test/
+tests/
+*.test.php
+*.test.js
+
+# ----------------- SSL/CERTIFICADOS -----------------
+# Certificados SSL
+*.pem
+*.key
+*.crt
+*.cer
+
+# ----------------- OUTROS -----------------
+# Arquivos do Git
+.git/
+.gitattributes
+
+# Arquivos compactados
+*.zip
+*.rar
+*.tar.gz
+*.7z

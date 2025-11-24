@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    
+    <!-- Página Principal - Prioridade Máxima -->
+    <url>
+        <loc>https://hub.agenciam2a.com.br/</loc>
+        <lastmod>2025-11-23</lastmod>
+        hangefrereq>weekly</changefreq>
+        <priority>1.0</priority>
+        <mobile:mobile/>
+        
+        <!-- Imagens do Portfólio (SEO para Google Imagens) -->
+        <image:image>
+            <image:loc>https://hub.agenciam2a.com.br/assets/meu-perfil/avatar.webp</image:loc>
+            <image:caption>José Guilherme Pandolfi - Growth Analyst e Desenvolvedor</image:caption>
+            <image:title>Foto de Perfil - José Guilherme Pandolfi</image:title>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://hub.agenciam2a.com.br/assets/imgs-portfolio/img01.webp</image:loc>
+            <image:caption>Portfólio de Design Gráfico para Social Media</image:caption>
+            <image:title>Projeto de Design - Social Media</image:title>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://hub.agenciam2a.com.br/assets/imgs-portfolio/img02.webp</image:loc>
+            <image:caption>Portfólio de Design Gráfico para Social Media</image:caption>
+            <image:title>Projeto de Design - Social Media</image:title>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://hub.agenciam2a.com.br/assets/imgs-portfolio/img03.webp</image:loc>
+            <image:caption>Portfólio de Design Gráfico para Social Media</image:caption>
+            <image:title>Projeto de Design - Social Media</image:title>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://hub.agenciam2a.com.br/assets/imgs-portfolio/img04.webp</image:loc>
+            <image:caption>Portfólio de Design Gráfico para Social Media</image:caption>
+            <image:title>Projeto de Design - Social Media</image:title>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://hub.agenciam2a.com.br/assets/imgs-portfolio/img05.webp</image:loc>
+            <image:caption>Portfólio de Design Gráfico para Social Media</image:caption>
+            <image:title>Projeto de Design - Social Media</image:title>
+        </image:image>
+        
+        <!-- Adicione mais imagens do portfólio conforme necessário -->
+    </url>
+    
+</urlset>

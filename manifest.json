@@ -1,0 +1,27 @@
+{
+  "name": "Hub de Links - José Guilherme Pandolfi",
+  "short_name": "Hub Jota",
+  "description": "Hub de links profissionais e sociais de José Guilherme Pandolfi (Jota)",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#00d4ff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "lifestyle", "social"],
+  "lang": "pt-BR",
+  "dir": "ltr"
+}

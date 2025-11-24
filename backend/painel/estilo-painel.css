@@ -1,0 +1,879 @@
+/* ==================== RESET E FONTES ==================== */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==================== VARIÁVEIS DE TEMA (SINCRONIZADAS COM FRONTEND) ==================== */
+:root {
+    /* Cor primária (mesmo do frontend) */
+    --cor-primaria: #D62454;
+    --cor-primaria-hover: #b51d45;
+    
+    /* MODO CLARO - Sincronizado com frontend */
+    --fundo-primario-claro: #ffffff;
+    --fundo-secundario-claro: #f9f9f9;
+    --fundo-card-claro: #ffffff;
+    --texto-primario-claro: #000000;
+    --texto-secundario-claro: #606060;
+    --borda-claro: #e0e0e0;
+    --sombra-claro: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --sombra-hover-claro: 0 8px 24px rgba(0, 0, 0, 0.15);
+    
+    /* MODO ESCURO - Sincronizado com frontend */
+    --fundo-primario-escuro: #0a0a0a;
+    --fundo-secundario-escuro: #1a1a1a;
+    --fundo-card-escuro: #1a1a1a;
+    --texto-primario-escuro: #ffffff;
+    --texto-secundario-escuro: #b0b0b0;
+    --borda-escuro: #2a2a2a;
+    --sombra-escuro: 0 4px 12px rgba(0, 0, 0, 0.5);
+    --sombra-hover-escuro: 0 8px 24px rgba(0, 0, 0, 0.7);
+    
+    /* Outras cores */
+    --cor-sucesso: #04d361;
+    --cor-erro: #f75a68;
+    --cor-aviso: #ffc107;
+    
+    /* Padrões */
+    --raio-borda: 12px;
+    --transicao: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Tema Claro (padrão) */
+body {
+    --fundo-primario: var(--fundo-primario-claro);
+    --fundo-secundario: var(--fundo-secundario-claro);
+    --fundo-card: var(--fundo-card-claro);
+    --texto-primario: var(--texto-primario-claro);
+    --texto-secundario: var(--texto-secundario-claro);
+    --borda: var(--borda-claro);
+    --sombra: var(--sombra-claro);
+    --sombra-hover: var(--sombra-hover-claro);
+}
+
+/* Tema Escuro - Mesma classe do frontend */
+body.tema-escuro {
+    --fundo-primario: var(--fundo-primario-escuro);
+    --fundo-secundario: var(--fundo-secundario-escuro);
+    --fundo-card: var(--fundo-card-escuro);
+    --texto-primario: var(--texto-primario-escuro);
+    --texto-secundario: var(--texto-secundario-escuro);
+    --borda: var(--borda-escuro);
+    --sombra: var(--sombra-escuro);
+    --sombra-hover: var(--sombra-hover-escuro);
+}
+
+body {
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--fundo-primario);
+    color: var(--texto-primario);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ==================== PÁGINA DE LOGIN ==================== */
+.pagina-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: var(--fundo-primario);
+    position: relative;
+}
+
+.container-login {
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    z-index: 1;
+}
+
+.card-login {
+    background-color: var(--fundo-card);
+    border-radius: var(--raio-borda);
+    padding: 40px;
+    box-shadow: var(--sombra-hover);
+    border: 2px solid var(--borda);
+}
+
+.cabecalho-login {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.titulo-login {
+    font-size: 32px;
+    color: var(--cor-primaria);
+    margin-bottom: 8px;
+    font-weight: 900;
+}
+
+.subtitulo-login {
+    color: var(--texto-secundario);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.alerta-erro {
+    background-color: rgba(247, 90, 104, 0.1);
+    border: 2px solid var(--cor-erro);
+    border-radius: var(--raio-borda);
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--cor-erro);
+    font-weight: 600;
+}
+
+.icone-erro {
+    font-size: 24px;
+}
+
+.formulario-login {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.label-campo {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--texto-primario);
+}
+
+.campo-entrada {
+    background-color: var(--fundo-secundario);
+    border: 2px solid var(--borda);
+    border-radius: var(--raio-borda);
+    padding: 14px 18px;
+    font-size: 16px;
+    color: var(--texto-primario);
+    transition: var(--transicao);
+    font-family: 'Lato', sans-serif;
+}
+
+.campo-entrada:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 4px rgba(214, 36, 84, 0.1);
+    background-color: var(--fundo-card);
+}
+
+.botao-entrar {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--raio-borda);
+    padding: 16px;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transicao);
+    margin-top: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.botao-entrar:hover {
+    background-color: var(--cor-primaria-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(214, 36, 84, 0.3);
+}
+
+.botao-entrar:active {
+    transform: translateY(0);
+}
+
+.rodape-login {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 2px solid var(--borda);
+    color: var(--texto-secundario);
+    font-size: 14px;
+}
+
+/* Botão Toggle Tema no Login */
+.botao-toggle-tema-login {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--fundo-card);
+    border: 2px solid var(--borda);
+    color: var(--texto-primario);
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transicao);
+    box-shadow: var(--sombra);
+    z-index: 10;
+    padding: 0;
+}
+
+.botao-toggle-tema-login ion-icon {
+    font-size: 26px;
+}
+
+.botao-toggle-tema-login:hover {
+    border-color: var(--cor-primaria);
+    transform: scale(1.08);
+    box-shadow: var(--sombra-hover);
+}
+
+/* ==================== DASHBOARD ==================== */
+.pagina-dashboard {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--fundo-primario);
+}
+
+/* Barra Lateral */
+.barra-lateral {
+    width: 280px;
+    background-color: var(--fundo-card);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    border-right: 2px solid var(--borda);
+    box-shadow: var(--sombra);
+    z-index: 100;
+}
+
+.logo-painel {
+    padding: 32px 24px;
+    border-bottom: 2px solid var(--borda);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-painel h1 {
+    color: var(--cor-primaria);
+    font-size: 26px;
+    font-weight: 900;
+}
+
+.botao-toggle-tema {
+    background: var(--fundo-secundario);
+    border: 2px solid var(--borda);
+    color: var(--texto-primario);
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transicao);
+    padding: 0;
+}
+
+.botao-toggle-tema ion-icon {
+    font-size: 24px;
+}
+
+.botao-toggle-tema:hover {
+    border-color: var(--cor-primaria);
+    transform: scale(1.08);
+    box-shadow: var(--sombra-hover);
+}
+
+.menu-navegacao {
+    flex: 1;
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.item-menu {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 24px;
+    color: var(--texto-secundario);
+    text-decoration: none;
+    transition: var(--transicao);
+    border-left: 4px solid transparent;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.item-menu:hover {
+    background-color: rgba(214, 36, 84, 0.08);
+    color: var(--texto-primario);
+}
+
+.item-menu.ativo {
+    background-color: rgba(214, 36, 84, 0.15);
+    color: var(--cor-primaria);
+    border-left-color: var(--cor-primaria);
+}
+
+.icone-menu {
+    font-size: 24px;
+    width: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rodape-barra-lateral {
+    padding: 24px;
+    border-top: 2px solid var(--borda);
+}
+
+.info-usuario {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 8px;
+    padding: 12px;
+    background: var(--fundo-secundario);
+    border-radius: var(--raio-borda);
+}
+
+.nome-usuario {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--texto-primario);
+}
+
+.email-usuario {
+    font-size: 13px;
+    color: var(--texto-secundario);
+    word-break: break-all;
+}
+
+/* Formulário de logout (botão logout) */
+.rodape-barra-lateral form {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.botao-logout {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background-color: var(--cor-erro);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--raio-borda);
+    justify-content: center;
+    transition: var(--transicao);
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    min-height: 44px;
+}
+
+.botao-logout:hover {
+    background-color: #d44853;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(247, 90, 104, 0.3);
+}
+
+.botao-logout:active {
+    transform: translateY(0);
+}
+
+.botao-logout ion-icon {
+    font-size: 20px;
+    pointer-events: none;
+}
+
+/* Conteúdo Principal */
+.conteudo-principal-painel {
+    margin-left: 280px;
+    flex: 1;
+    padding: 40px;
+    min-height: 100vh;
+}
+
+.cabecalho-painel {
+    margin-bottom: 40px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid var(--borda);
+}
+
+.titulo-pagina {
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: 900;
+    color: var(--texto-primario);
+}
+
+.subtitulo-pagina {
+    color: var(--texto-secundario);
+    font-size: 17px;
+    font-weight: 400;
+}
+
+/* Cards de Estatísticas */
+.secao-cards-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.card-stat {
+    background-color: var(--fundo-card);
+    border: 2px solid var(--borda);
+    border-radius: var(--raio-borda);
+    padding: 28px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    box-shadow: var(--sombra);
+    transition: var(--transicao);
+}
+
+.card-stat:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-hover);
+    border-color: var(--cor-primaria);
+}
+
+.icone-card {
+    font-size: 42px;
+    color: var(--cor-primaria);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(214, 36, 84, 0.1);
+    border-radius: 12px;
+}
+
+.info-card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.label-card {
+    font-size: 14px;
+    color: var(--texto-secundario);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.valor-card {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--texto-primario);
+    line-height: 1;
+}
+
+/* Grade de Seções */
+.grade-secoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 28px;
+}
+
+.secao-detalhes {
+    background-color: var(--fundo-card);
+    border: 2px solid var(--borda);
+    border-radius: var(--raio-borda);
+    padding: 28px;
+    box-shadow: var(--sombra);
+}
+
+.titulo-secao {
+    font-size: 20px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 3px solid var(--borda);
+    font-weight: 900;
+    color: var(--texto-primario);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.titulo-secao ion-icon {
+    font-size: 26px;
+    color: var(--cor-primaria);
+}
+
+.lista-ranking,
+.lista-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.item-ranking {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px;
+    background-color: var(--fundo-secundario);
+    border: 2px solid var(--borda);
+    border-radius: var(--raio-borda);
+    transition: var(--transicao);
+}
+
+.item-ranking:hover {
+    border-color: var(--cor-primaria);
+    transform: translateX(4px);
+}
+
+.posicao-ranking {
+    font-weight: 900;
+    font-size: 22px;
+    color: var(--cor-primaria);
+    min-width: 36px;
+}
+
+.info-ranking {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.nome-ranking {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--texto-primario);
+}
+
+.detalhe-ranking {
+    font-size: 13px;
+    color: var(--texto-secundario);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.valor-ranking {
+    font-weight: 900;
+    font-size: 20px;
+    color: var(--cor-sucesso);
+}
+
+.item-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: var(--fundo-secundario);
+    border: 2px solid var(--borda);
+    border-radius: var(--raio-borda);
+    transition: var(--transicao);
+}
+
+.item-stat:hover {
+    border-color: var(--cor-primaria);
+}
+
+.label-stat {
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--texto-primario);
+}
+
+.valor-stat {
+    font-weight: 900;
+    font-size: 18px;
+    color: var(--cor-primaria);
+}
+
+.mensagem-vazio {
+    text-align: center;
+    color: var(--texto-secundario);
+    padding: 32px 20px;
+    font-size: 15px;
+}
+
+/* ==================== FILTRO DE PERÍODO ==================== */
+.secao-filtro-periodo {
+    margin-bottom: 32px;
+}
+
+.card-filtro {
+    background-color: var(--fundo-card);
+    border: 2px solid var(--borda);
+    border-radius: var(--raio-borda);
+    padding: 24px;
+    box-shadow: var(--sombra);
+}
+
+.cabecalho-filtro {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.icone-filtro {
+    font-size: 28px;
+    color: var(--cor-primaria);
+}
+
+.titulo-filtro {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--texto-primario);
+    margin: 0;
+}
+
+.formulario-filtro {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.grupo-datas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.campo-data {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.label-data {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--texto-primario);
+}
+
+.label-data ion-icon {
+    font-size: 20px;
+    color: var(--cor-primaria);
+}
+
+.input-data {
+    background-color: var(--fundo-secundario);
+    border: 2px solid var(--borda);
+    border-radius: var(--raio-borda);
+    padding: 12px 16px;
+    font-size: 15px;
+    color: var(--texto-primario);
+    font-family: 'Lato', sans-serif;
+    transition: var(--transicao);
+}
+
+.input-data:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 4px rgba(214, 36, 84, 0.1);
+}
+
+.botoes-filtro {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.botao-aplicar-filtro,
+.botao-limpar-filtro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: var(--raio-borda);
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transicao);
+    border: none;
+    font-family: 'Lato', sans-serif;
+}
+
+.botao-aplicar-filtro {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    flex: 1;
+    min-width: 180px;
+}
+
+.botao-aplicar-filtro:hover {
+    background-color: var(--cor-primaria-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(214, 36, 84, 0.3);
+}
+
+.botao-limpar-filtro {
+    background-color: var(--fundo-secundario);
+    color: var(--texto-primario);
+    border: 2px solid var(--borda);
+}
+
+.botao-limpar-filtro:hover {
+    border-color: var(--cor-primaria);
+    background-color: rgba(214, 36, 84, 0.1);
+}
+
+.botoes-filtro ion-icon {
+    font-size: 20px;
+}
+
+/* ==================== RESPONSIVIDADE ==================== */
+/* Ícones dos cards responsivos */
+@media (max-width: 1200px) {
+    .icone-card {
+        font-size: 38px;
+        width: 56px;
+        height: 56px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .barra-lateral {
+        width: 240px;
+    }
+    
+    .conteudo-principal-painel {
+        margin-left: 240px;
+        padding: 32px 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .barra-lateral {
+        width: 220px;
+    }
+    
+    .conteudo-principal-painel {
+        margin-left: 220px;
+        padding: 24px 16px;
+    }
+    
+    .titulo-pagina {
+        font-size: 28px;
+    }
+    
+    .grade-secoes {
+        grid-template-columns: 1fr;
+    }
+
+    .icone-card {
+        font-size: 34px;
+        width: 52px;
+        height: 52px;
+    }
+    
+    .valor-card {
+        font-size: 28px;
+    }
+    
+    .card-stat {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 640px) {
+    .pagina-dashboard {
+        flex-direction: column;
+    }
+    
+    .barra-lateral {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    .conteudo-principal-painel {
+        margin-left: 0;
+        padding: 20px 16px;
+    }
+    
+    .logo-painel {
+        padding: 20px 16px;
+    }
+    
+    .menu-navegacao {
+        padding: 16px 0;
+    }
+    
+    .rodape-barra-lateral {
+        padding: 16px;
+    }
+    
+    .secao-cards-stats {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .icone-card {
+        font-size: 30px;
+        width: 48px;
+        height: 48px;
+    }
+    
+    .valor-card {
+        font-size: 24px;
+    }
+    
+    .label-card {
+        font-size: 13px;
+    }
+    
+    .card-stat {
+        padding: 20px;
+        gap: 14px;
+    }
+
+    .grupo-datas {
+        grid-template-columns: 1fr;
+    }
+    
+    .botoes-filtro {
+        flex-direction: column;
+    }
+    
+    .botao-aplicar-filtro,
+    .botao-limpar-filtro {
+        width: 100%;
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .icone-card {
+        font-size: 28px;
+        width: 44px;
+        height: 44px;
+    }
+    
+    .valor-card {
+        font-size: 22px;
+    }
+}

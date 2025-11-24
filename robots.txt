@@ -1,0 +1,71 @@
+# robots.txt - Hub de Links do José Guilherme Pandolfi
+# Configuração otimizada para SEO, GEO e segurança
+
+# Regras para todos os crawlers (padrão)
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /assets/
+Allow: /assets/meu-perfil/
+Allow: /assets/imgs-portfolio/
+
+# Bloqueia áreas administrativas e sensíveis
+Disallow: /backend/
+Disallow: /backend/api/
+Disallow: /backend/painel/
+
+# Bloqueia arquivos de configuração
+Disallow: /.env
+Disallow: /.git
+Disallow: /.gitignore
+Disallow: /referencia-site-m2a.md
+
+# Bloqueia endpoints de API pública (se existirem)
+Disallow: /api/
+
+# Permite acesso a arquivos estáticos importantes
+Allow: /scripts.js
+Allow: /styles.css
+
+# Regras específicas para bots de IA generativa (GEO)
+# OpenAI GPTBot (ChatGPT)
+User-agent: GPTBot
+Allow: /
+Allow: /index.html
+Crawl-delay: 10
+
+# Google Bard/Gemini
+User-agent: Google-Extended
+Allow: /
+Allow: /index.html
+Crawl-delay: 10
+
+# Anthropic Claude
+User-agent: anthropic-ai
+Allow: /
+Allow: /index.html
+Crawl-delay: 10
+
+# Common Crawl (usado por várias IAs)
+User-agent: CCBot
+Allow: /
+Allow: /index.html
+Crawl-delay: 10
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+Allow: /index.html
+Crawl-delay: 10
+
+# Regras para bots de imagem (otimização para portfólio)
+User-agent: Googlebot-Image
+Allow: /assets/imgs-portfolio/
+Allow: /assets/meu-perfil/
+Crawl-delay: 5
+
+# Localização do Sitemap XML
+Sitemap: https://hub.agenciam2a.com.br/sitemap.xml
+
+# Host preferencial (evita conteúdo duplicado)
+Host: hub.agenciam2a.com.br
